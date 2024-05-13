@@ -39,3 +39,6 @@
     margin: 10px 0;
     position: relative;
 }
+.input-group label{
+    flex-basis: 28%;
+}
