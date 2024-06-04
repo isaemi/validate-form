@@ -18,3 +18,22 @@ function validateName(){
     nameError.innerHTML = '<i class="fa-solid fa-circle-check" class="check"></i>';
     return true;
 }
+
+function validatePhone(){
+    var phone = document.getElementById('contact-phone').value;
+
+    if(phone.length == 0){
+        phoneError.innerHTML = "Phone is required";
+        return false;
+    }
+    if(phone.length !== 10){
+        phoneError.innerHTML = 'Phone no should be 10 digits';
+        return false;
+    }
+    if(!phone.match(/^\d{10}$/)){
+        phoneElement.innerHTML = 'Only digits please.';
+        return false;
+    }
+    phoneError.innerHTML = '<i class="fa-solid fa-circle-check" class="check"></i>'
+    return true;
+}
