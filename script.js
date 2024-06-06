@@ -37,3 +37,12 @@ function validatePhone(){
     phoneError.innerHTML = '<i class="fa-solid fa-circle-check" class="check"></i>'
     return true;
 }
+
+function validateEmail(){
+    var email = document.getElementById('contact-email').value;
+
+    if(email.length == 0){
+        emailError.innerHTML = "Email is required";
+        return false;
+    }
+}
