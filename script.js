@@ -34,7 +34,7 @@ function validatePhone(){
         phoneElement.innerHTML = 'Only digits please.';
         return false;
     }
-    phoneError.innerHTML = '<i class="fa-solid fa-circle-check" class="check"></i>'
+    phoneError.innerHTML = '<i class="fa-solid fa-circle-check" class="check"></i>';
     return true;
 }
 
@@ -45,4 +45,6 @@ function validateEmail(){
         emailError.innerHTML = "Email is required";
         return false;
     }
+    emailError.innerHTML = '<i class="fa-solid fa-circle-check" class="check"></i>';
+    return true;
 }
