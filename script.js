@@ -45,6 +45,10 @@ function validateEmail(){
         emailError.innerHTML = "Email is required";
         return false;
     }
+    if(email.length > 500){
+        emailError.innerHTML = "Email is required";
+        return false;
+    }
     emailError.innerHTML = '<i class="fa-solid fa-circle-check" class="check"></i>';
     return true;
 }
