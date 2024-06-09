@@ -45,8 +45,8 @@ function validateEmail(){
         emailError.innerHTML = "Email is required";
         return false;
     }
-    if(email.length > 500){
-        emailError.innerHTML = "Email is required";
+    if(!email.match(/^[A-Za-z]\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)){
+        emailError.innerHTML = "Email is invalid";
         return false;
     }
     emailError.innerHTML = '<i class="fa-solid fa-circle-check" class="check"></i>';
