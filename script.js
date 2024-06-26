@@ -11,7 +11,7 @@ function validateName(){
         nameError.innerHTML = 'Name is required';   
         return false;
     }
-    if(!name.match(/^[A-Za-z]+\s{1}[A-Za-z]+$/)){
+    if(!name.match(/^[A-Za-z+\s{1}[A-Za-z]+$/)){
         nameError.innerHTML = 'Write full name';
         return false;
     }
@@ -50,5 +50,18 @@ function validateEmail(){
         return false;
     }
     emailError.innerHTML = '<i class="fa-solid fa-circle-check" class="check"></i>';
+    return true;
+}
+
+function validateMessage(){
+    var message = document.getElementById('contact-message').value;
+    var required = 30;
+    var left = required - message.length;
+
+    if(left > 0){
+        messageError.innerHTML = left + ' more characters required';
+        return false;
+    }
+    messageError.innerHTML = '<i class="fa-solid fa-circle-check" class="check"></i>';
     return true;
 }
